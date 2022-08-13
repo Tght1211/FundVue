@@ -1,0 +1,16 @@
+*{
+    margin: 0; /*将外边距设置为0*/
+    padding: 0;
+    -moz-box-sizing: border-box;/*变成一个盒状的模型*/
+    /*text-decoration: none;*/
+}
+.el-table   .el-table__cell {
+   /* padding: 8px 0;
+    min-width: 0;
+    box-sizing: border-box;
+    text-overflow: ellipsis;
+    vertical-align: middle;
+    position: relative;
+    text-align: left;
+    z-index: auto !* 不然图层没在最上面*!*/
+}
