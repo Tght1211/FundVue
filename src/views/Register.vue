@@ -35,7 +35,7 @@
             </el-input>
           </el-form-item>
           <el-form-item prop="account">
-            <el-input class="el-inp" size="large" :prefix-icon="Avatar" v-model="form.account" placeholder="请输入手机号或邮箱">
+            <el-input class="el-inp" size="large" :prefix-icon="Avatar" v-model="form.account" placeholder="请输入手机号(邮箱暂停使用)">
               <el-icon>
                 <avatar/>
               </el-icon>

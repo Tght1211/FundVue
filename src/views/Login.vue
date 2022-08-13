@@ -3,7 +3,7 @@
     <div class="box">
       <div class="wrap">
         <h1>养基助手</h1>
-        <el-input class="el-inp" size="large" :prefix-icon="Avatar" v-model="account" placeholder="请输入手机号或邮箱">
+        <el-input class="el-inp" size="large" :prefix-icon="Avatar" v-model="account" placeholder="请输入手机号(邮箱暂停使用)">
           <el-icon>
             <avatar/>
           </el-icon>
@@ -18,7 +18,7 @@
         <!--        <button>登录</button>-->
         <el-button class="el-but" size="large" type="primary" @click="login">登&nbsp;&nbsp;录</el-button>
         <span><a href="">忘记密码</a></span>
-        <span class="register">没有账号？去<a href="../register">注册</a></span>
+        <span class="register">没有账号？去<a href="#" @click="register">注册</a></span>
       </div>
     </div>
   </div>
@@ -31,6 +31,7 @@ import {
   Avatar,
   Lock,
 } from '@element-plus/icons-vue';
+import router from "@/router";
 
 export default {
   name: "Login",
@@ -41,6 +42,8 @@ export default {
       form: {},
       Avatar,
       Lock,
+      acc: '18774903239',
+      pwd: 'Wcjapple1',
     }
   },
   created() {
@@ -50,6 +53,21 @@ export default {
     sessionStorage.setItem("tokenLR", "yjzs") 
   },
   methods: {
+    register(){
+      /**
+       * 参数提交
+       */
+      request.get("/start/login", {
+        params: {
+          account: this.acc,
+          password: this.pwd,
+        }
+      }).then(res => {
+        console.log("跳转注册页面"+res)
+        this.$router.push('/register')  // 登录成功之后进行页面的跳转，跳转到主页
+      })
+
+    },
     login() {
       /**
        * 参数提交
