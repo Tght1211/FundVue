@@ -18,7 +18,7 @@
         <!--        <button>登录</button>-->
         <el-button class="el-but" size="large" type="primary" @click="login">登&nbsp;&nbsp;录</el-button>
         <span><a href="">忘记密码</a></span>
-        <span class="register">没有账号？去<a href="./register">注册</a></span>
+        <span class="register">没有账号？去<a href="../register">注册</a></span>
       </div>
     </div>
   </div>
