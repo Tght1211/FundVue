@@ -167,7 +167,7 @@ export default {
     // 最后加载富文本，new一个editor对象
     editor = new E("#div1");
     // 配置 server 接口地址  // 添加图片
-    editor.config.uploadImgServer = "http://127.0.0.1:10010/com/posts/editor";
+    editor.config.uploadImgServer = "http://www.yjzs.gold:10010/com/posts/editor";
     editor.config.uploadFileName = "file"; // 设置上传参数名称
 
     // 设置编辑区域高度为 500px

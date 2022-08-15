@@ -180,7 +180,7 @@
                     </el-upload>  -->
                     <el-upload
                       class="avatar-uploader"
-                      action="http://127.0.0.1:5050/start/imageUrl"
+                      action="http://106.14.164.228:5050/start/imageUrl"
                       :show-file-list="false"
                       :on-success="filesUploadSuccess"
                     >
@@ -397,7 +397,7 @@ export default {
       form: {},
       form1: {},
       dialogVisible: false,
-      FilesUploadUrl: "http://127.0.0.1:10010/start/imageUrl",
+      FilesUploadUrl: "http://39.105.218.27:10010/start/imageUrl",
     };
   },
   components: { PostAndRight, FavAndRight, ComAndRight, Plus },
